@@ -37,11 +37,6 @@ public class Craps {
                     System.out.println("Error! PLease enter either Y or N.");
                     System.out.println("\nWould you like to play again? [Y/N]\n");
                     ans = userInput.nextLine();
-                    if (ans.equals("n") || ans.equals("N")) {
-                        game = false;
-                    } else if (ans.equals("y") || ans.equals("Y")) {
-                        game = true;
-                    }
                 }
 
             } else if (playGame.diceRoll == 2 || playGame.diceRoll == 3 || playGame.diceRoll == 12) {
@@ -61,11 +56,6 @@ public class Craps {
                     System.out.println("Error! PLease enter either Y or N.");
                     System.out.println("\nWould you like to play again? [Y/N]\n");
                     ans = userInput.nextLine();
-                    if (ans.equals("n") || ans.equals("N")) {
-                        game = false;
-                    } else if (ans.equals("y") || ans.equals("Y")) {
-                        game = true;
-                    }
                 }
 
             } else {
@@ -99,11 +89,6 @@ public class Craps {
                             System.out.println("Error! PLease enter either Y or N.");
                             System.out.println("\nWould you like to play again? [Y/N]\n");
                             ans = userInput.nextLine();
-                            if (ans.equals("n") || ans.equals("N")) {
-                                game = false;
-                            } else if (ans.equals("y") || ans.equals("Y")) {
-                                game = true;
-                            }
                         }
                         break;
                     }
@@ -128,11 +113,6 @@ public class Craps {
                             System.out.println("Error! PLease enter either Y or N.");
                             System.out.println("\nWould you like to play again? [Y/N]\n");
                             ans = userInput.nextLine();
-                            if (ans.equals("n") || ans.equals("N")) {
-                                game = false;
-                            } else if (ans.equals("y") || ans.equals("Y")) {
-                                game = true;
-                            }
                         }
                         break;
                     }
