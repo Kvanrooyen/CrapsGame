@@ -1,4 +1,3 @@
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -6,9 +5,9 @@ public class Craps {
 
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
-        String ans = ""; //Decalre variable for use in play again loop
+        String ans = ""; //Declare variable for use in play again loop
         boolean game = true;
-        while (game == true) {
+        while (game) {
             RandomNumber diceRoll = new RandomNumber(); //Create instance diceRoll of class RandomNumber
             play playGame = new play(); //Create instance playGame of class play
 
@@ -31,12 +30,22 @@ public class Craps {
                 ans = userInput.next();
                 if (ans.equals("n") || ans.equals("N")) {
                     game = false;
+                    System.exit(0);
                 } else if (ans.equals("y") || ans.equals("Y")) {
                     game = true;
                 } else {
-                    System.out.println("Error! PLease enter either Y or N.");
-                    System.out.println("\nWould you like to play again? [Y/N]\n");
-                    ans = userInput.nextLine();
+                    System.out.println("Error! Please enter either Y or N.");
+                    while (!"y".equals(ans) || !"Y".equals(ans) || !"n".equals(ans) || !"N".equals(ans)) {
+                        System.out.println("Would you like to play again? [Y/N]\n");
+                        ans = userInput.next();
+                        if (ans.equals("n") || ans.equals("N")) {
+                            game = false;
+                            break;
+                        } else if (ans.equals("y") || ans.equals("Y")) {
+                            game = true;
+                            break;
+                        }
+                    }
                 }
 
             } else if (playGame.diceRoll == 2 || playGame.diceRoll == 3 || playGame.diceRoll == 12) {
@@ -50,19 +59,29 @@ public class Craps {
                 ans = userInput.next();
                 if (ans.equals("n") || ans.equals("N")) {
                     game = false;
+                    System.exit(0);
                 } else if (ans.equals("y") || ans.equals("Y")) {
                     game = true;
                 } else {
-                    System.out.println("Error! PLease enter either Y or N.");
-                    System.out.println("\nWould you like to play again? [Y/N]\n");
-                    ans = userInput.nextLine();
+                    System.out.println("Error! Please enter either Y or N.");
+                    while (!"y".equals(ans) || !"Y".equals(ans) || !"n".equals(ans) || !"N".equals(ans)) {
+                        System.out.println("Would you like to play again? [Y/N]\n");
+                        ans = userInput.next();
+                        if (ans.equals("n") || ans.equals("N")) {
+                            game = false;
+                            break;
+                        } else if (ans.equals("y") || ans.equals("Y")) {
+                            game = true;
+                            break;
+                        }
+                    }
                 }
 
             } else {
                 System.out.println("Point: " + playGame.point);
                 System.out.println("-----------------------------------------");
 
-                while(playGame.point != playGame.newPoint || playGame.point == playGame.newPoint) {
+                while (playGame.point != playGame.newPoint || playGame.point == playGame.newPoint) {
      /*
      BUG: (2/2/19)
          User will receive their original roll again, causing them to always win
@@ -83,12 +102,22 @@ public class Craps {
                         ans = userInput.next();
                         if (ans.equals("n") || ans.equals("N")) {
                             game = false;
+                            System.exit(0);
                         } else if (ans.equals("y") || ans.equals("Y")) {
                             game = true;
                         } else {
-                            System.out.println("Error! PLease enter either Y or N.");
-                            System.out.println("\nWould you like to play again? [Y/N]\n");
-                            ans = userInput.nextLine();
+                            System.out.println("Error! Please enter either Y or N.");
+                            while (!"y".equals(ans) || !"Y".equals(ans) || !"n".equals(ans) || !"N".equals(ans)) {
+                                System.out.println("Would you like to play again? [Y/N]\n");
+                                ans = userInput.next();
+                                if (ans.equals("n") || ans.equals("N")) {
+                                    game = false;
+                                    break;
+                                } else if (ans.equals("y") || ans.equals("Y")) {
+                                    game = true;
+                                    break;
+                                }
+                            }
                         }
                         break;
                     }
@@ -99,7 +128,7 @@ public class Craps {
       /*
       BUG: (27/2/19)
           The while loop would not terminate even if user, did not want to play again.
-          This occured everytime the user won or lost, and asked if they wanted to play again.
+          This occurred every time the user won or lost, and asked if they wanted to play again.
       FIX: (27/2/19)
           Changed condition in if statement to be .equals instead of ==
       */
@@ -107,12 +136,22 @@ public class Craps {
                         ans = userInput.next();
                         if (ans.equals("n") || ans.equals("N")) {
                             game = false;
+                            System.exit(0);
                         } else if (ans.equals("y") || ans.equals("Y")) {
                             game = true;
                         } else {
-                            System.out.println("Error! PLease enter either Y or N.");
-                            System.out.println("\nWould you like to play again? [Y/N]\n");
-                            ans = userInput.nextLine();
+                            System.out.println("Error! Please enter either Y or N.");
+                            while (!"y".equals(ans) || !"Y".equals(ans) || !"n".equals(ans) || !"N".equals(ans)) {
+                                System.out.println("Would you like to play again? [Y/N]\n");
+                                ans = userInput.next();
+                                if (ans.equals("n") || ans.equals("N")) {
+                                    game = false;
+                                    break;
+                                } else if (ans.equals("y") || ans.equals("Y")) {
+                                    game = true;
+                                    break;
+                                }
+                            }
                         }
                         break;
                     }
